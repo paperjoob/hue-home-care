@@ -1,0 +1,30 @@
+/* A universal selector will select each and every element on the page and then
+apply these decorations to it. */
+// * {
+//     margin: 0;
+//     padding: 0;
+//     box-sizing: border-box;
+// }
+
+html {
+    // This defines what 1rem is
+    font-size: 62.5%; // 1 rem = 10 pixels ; 10px/16px = 62.5%
+
+    // Media Query Mixins - larger ones before smaller ones
+
+    @include respond(tab-land) { // width less than 1200?
+        font-size: 56.25%; // 1 rem = 9 px; 9/16 = 56.25%
+    }
+
+    @include respond(tab-port) { // width less than 900?
+        font-size: 50%; // 1 rem = 8 px; 8/16 = 50%
+    }
+
+    // if its 700 pixels, both media queries will be applied. 
+    // the last declaration will be applied at the end - 50% since 900 is closer to 700
+
+    @include respond(big-desktop) {
+        font-size: 75%; // 1 rem = 12 px; 12/16 = 75% - increase font size
+    }
+
+}

@@ -1,0 +1,32 @@
+.logo-box {
+
+    margin-right: 10em;
+    // box-sizing: border-box;
+
+    &__transparent {
+
+        position: relative;
+        text-align: center;
+        width: 20.5em;
+
+        @include respond(tab-land) {
+            margin-right: 0;
+            width: 28em;
+        }
+
+        @include respond(tab-port) {
+            margin-right: 12em;
+            width: 22em;
+        }
+
+        @include respond(phone) {
+            // padding-left: 5em;
+            width: 30em;
+        }
+    }
+
+    .navbar-toggler-icon {
+        padding-right: 1.5em;
+    }
+
+}

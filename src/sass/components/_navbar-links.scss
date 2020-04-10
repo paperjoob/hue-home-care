@@ -1,0 +1,27 @@
+.navbar-links {
+    font-size: 2em;
+    padding-left: 1em;
+    padding-top: 1.5em;
+
+    .nav-item {
+        margin: .1em;
+
+        @include respond(tab-land) {
+            font-size: .70em;     
+            padding-left: 0;
+            padding-top: 0;
+        }
+
+        @include respond(tab-port) {
+            font-size: .60em;     
+            padding-left: 0;
+            padding-top: 0;
+        }
+
+        @include respond(phone) {
+            font-size: .40em;
+            padding-left: 0;
+            padding-top: 0;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+// Respond Mixin with a breakpoint parameter
+@mixin respond($breakpoint) {
+    // If Directive - if breakpoint is true (breakpoint size), do this
+
+    // Phone - less than 600px
+    @if $breakpoint == phone {
+        // lets use pass a block of code into the mixin with CONTENT
+        @media (max-width: 37.5em) { @content }; 
+    }
+
+    // Tablet Portrait - less than 900px
+    @if $breakpoint == tab-port {
+        @media (max-width: 56.25em) { @content }; 
+    }
+
+    // Tablet Landscape - less than 1200px
+    @if $breakpoint == tab-land {
+        @media (max-width: 75em) { @content }; 
+    }
+
+    // Big Desktop - larger than 1800px
+    @if $breakpoint == big-desktop {
+        @media (min-width: 112.5em) { @content }; 
+    }
+    
+}

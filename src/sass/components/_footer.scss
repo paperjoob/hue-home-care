@@ -1,0 +1,127 @@
+.footer {
+    background-color: $color-grey-dark-footer;
+    padding: 10rem;
+    font-size: 1.4rem; 
+    color: $color-grey-light-1;
+
+    @include respond(tab-land) {
+        padding: 9rem 0;
+    }
+
+    // change responsiveness
+    @include respond(tab-port) {
+        padding: 8rem 0;
+    }
+
+    // change responsiveness
+    @include respond(phone) {
+        padding: 4rem 0;
+    }
+
+    &__navigation {
+        padding-top: 2rem;
+        display: inline-block;
+
+        @include respond(tab-land) {
+            width: 100%;
+            text-align: center;
+        }
+
+        @include respond(tab-port) {
+            width: 100%;
+            text-align: center;
+        }
+
+        @include respond(phone) {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    &__list {
+        list-style: none;
+    }
+
+    &__item {
+        display: inline-block;
+
+        &:not(:last-child) {
+            margin-right: 1.5rem;
+        }
+    }
+
+    &__link {
+        &:link,
+        &:visited {
+            color: $color-grey-light-1;
+            text-decoration: none;
+            text-transform: uppercase;
+            display: inline-block;
+        }
+
+        &:hover,
+        &:active {
+            color: $color-primary;
+        }
+    }
+
+
+    // contacts information
+    &__contact {
+        display: block;
+        text-align: right;
+        margin-left: 3rem;
+
+        @include respond(tab-land) {
+            width: 100%;
+            // margin-left: .5rem;
+        }
+
+        @include respond(tab-port) {
+            width: 100%;
+            // margin-left: .5rem;
+        }
+
+        @include respond(phone) {
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+
+    &__ul__list {
+        list-style: none;
+    }
+
+    // &__ul__item {
+    //     display: inline-block;
+
+    //     &:not(:last-child) {
+    //         margin-right: 1.5rem;
+    //     }
+    // }
+
+    &__copyright {
+        font-size: 1.1rem;
+        margin-top: 8rem;
+        border-top: 1px solid $color-grey-dark;
+        padding-top: 2rem;
+        width: 100%;
+        // float: right;
+
+        @include respond(tab-port) {
+            width: 100%;
+            text-align: center;
+            float: none;
+        }
+
+        @include respond(phone) {
+            width: 100%;
+            text-align: center;
+        }
+    }
+        // change responsiveness
+        @include respond(tab-port) {
+            padding: 8rem 0;
+        }
+
+}
